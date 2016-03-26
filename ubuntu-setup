@@ -8,7 +8,7 @@ exit
 # Update and install
 sudo apt-get -y update
 sudo apt-get -y upgrade
-sudo apt-get -y install binutils binwalk build-essential gdb git ipython nasm netcat-traditional nmap qemu-system openssl p7zip scapy ssh tmux vim wine
+sudo apt-get -y install binutils binwalk build-essential gdb git ipython nasm netcat-traditional nmap qemu-system openssl p7zip scapy ssh tmux vim
 
 # binjitsu
 sudo apt-get update
@@ -30,7 +30,24 @@ sudo ./make.sh install
 cd bindings/python
 sudo python2 setup.py install # Ubuntu 12.04, GDB uses Python2
 sudo python3 setup.py install # Ubuntu 14.04+, GDB uses Python3
-sudo pip3 install 
+pip install -Ur requirements.txt
+
+#unicorn
+git clone https://github.com/unicorn-engine/unicorn.git
+sudo apt-get install libglib2.0-dev
+cd unicorn
+./make.sh
+./make.sh install
+
+# pwntools
+sudo pip install pwntools
+sudo add-apt-repository ppa:pwntools/binutils -y
+sudo apt-get update -qy
+sudo apt-get install -qy binutils-{aarch64,alpha,arm,avr,cris,hppa,i386,ia64,m68k,msp430,powerpc{,64},sparc{,64},vax,xscale}-linux-gnu
+
+# peda
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
 
 # Qemu Setup
 # http://www.routards.org/2013/08/defcon-21-ctf-binaries-and-environment.html
