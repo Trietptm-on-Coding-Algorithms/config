@@ -1,0 +1,107 @@
+# brewfile to setup os x
+# install:
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# usage:
+# brew bundle brewfile
+
+# update and upgrade
+update
+upgrade
+
+# install
+install aspell
+install atk
+install autoconf
+install automake
+install bdw-gc
+install binutils
+install binwalk
+install brew-cask
+install cairo
+install cmake
+install curl
+install dirmngr
+install exiftool
+install fontconfig
+install freetype
+install gcc
+install gd
+install gdk-pixbuf
+install gettext
+install glib
+install gmp
+install gnupg2
+install gnutls
+install gobject-introspection
+install gpg-agent
+install gpgme
+install gtk+
+install guile
+install harfbuzz
+install hicolor-icon-theme
+install httrack
+install icu4c
+install isl
+install jasper
+install jpeg
+install libassuan
+install libdnet
+install libevent
+install libewf
+install libffi
+install libgcrypt
+install libgpg-error
+install libgphoto2
+install libicns
+install libksba
+install libmagic
+install libmpc
+install libpng
+install libtasn1
+install libtiff
+install libtool
+install libunistring
+install libusb
+install libusb-compat
+install little-cms2
+install lua
+install lua51
+install makedepend
+install mpfr
+install mysql
+install nasm
+install nettle
+install nmap
+install openssl
+install p7zip
+install pango
+install pcre
+install pinentry
+install pixman
+install pkg-config
+install pth
+install pwntools
+install pyqt
+install pyside
+install qt
+install readline
+install reattach-to-user-namespace
+install sane-backends
+install scapy
+install shiboken
+install sip
+install ssdeep
+install swig
+install tmux
+install tokyo-cabinet
+install ucl
+install upx
+install vim
+install weechat
+install wget
+install wine
+install xz
+install yara
+
+# clean outdated versions
+cleanup
