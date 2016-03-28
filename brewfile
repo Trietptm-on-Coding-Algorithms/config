@@ -18,6 +18,7 @@ install binutils
 install binwalk
 install brew-cask
 install cairo
+install capstone
 install cmake
 install curl
 install dirmngr
