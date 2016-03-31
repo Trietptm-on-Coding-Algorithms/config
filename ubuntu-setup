@@ -1,3 +1,5 @@
+# # https://github.com/zachriggle/config/blob/4f92346002f5d7faf69faad8ed06a48e70c8d162/bin/initialize-linux-vm.sh
+
 # Ubuntu Setup
 # Sudo no password
 sudo bash
@@ -89,3 +91,37 @@ cd metasploit-framework-*
 rm -f .ruby-version
 gem install bundler
 bundle install
+
+# SSH
+
+sudo service ssh restart
+sudo mv -n /etc/ssh/sshd_config{,.original}
+sudo sh -c "cat > /etc/ssh/sshd_config <<EOF
+Protocol                        2
+Port                            22
+PubkeyAuthentication            yes
+Ciphers                         aes256-ctr
+UsePAM                          no
+PermitRootLogin                 no
+PasswordAuthentication          no
+PermitEmptyPasswords            no
+KerberosAuthentication          no
+GSSAPIAuthentication            no
+ChallengeResponseAuthentication no
+HostbasedAuthentication         no
+KbdInteractiveAuthentication    no
+X11Forwarding                   yes
+PermitTunnel                    no
+AllowTcpForwarding              yes
+UsePrivilegeSeparation          sandbox
+UseDNS                          no
+StrictModes                     yes
+Compression                     delayed
+Subsystem      sftp             /usr/lib/openssh/sftp-server
+AcceptEnv LANG LC_*
+AcceptEnv TZ
+AcceptEnv COLORFGBG
+AcceptEnv WINDOW
+AcceptEnv TMUX
+EOF"
+sudo service ssh restart
