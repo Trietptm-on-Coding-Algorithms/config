@@ -1,4 +1,4 @@
-export PATH=$PATH:/Users/thalfpop/bin:/usr/local/sbin
+export PATH=$PATH:~/bin:/usr/local/sbin
 
 export EDITOR=vim
 export VISUAL=$EDITOR
