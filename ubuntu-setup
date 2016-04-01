@@ -10,7 +10,10 @@ exit
 # Update and install
 sudo apt-get -y update
 sudo apt-get -y upgrade
-sudo apt-get -y install binutils binwalk build-essential gdb git ipython nasm netcat-traditional nmap qemu-system openssl p7zip scapy ssh tmux vim
+sudo apt-get -y install binutils binwalk build-essential gdb git ipython nasm netcat-traditional nmap qemu-system openssl p7zip pwgen scapy socat ssh tmux vim
+
+# checksec
+wget http://www.trapkit.de/tools/checksec.sh
 
 # binjitsu
 sudo apt-get update
@@ -40,6 +43,12 @@ sudo apt-get install libglib2.0-dev
 cd unicorn
 ./make.sh
 ./make.sh install
+
+# qira
+
+git clone https://github.com/BinaryAnalysisPlatform/qira.git
+cd qira/
+./install.sh
 
 # pwntools
 sudo pip install pwntools
@@ -125,3 +134,10 @@ AcceptEnv WINDOW
 AcceptEnv TMUX
 EOF"
 sudo service ssh restart
+
+# Set PW
+
+password=$(pwgen -s 64 1)
+sudo passwd -u -d "$USER"
+(echo "$password"; echo "$passwd") | passwd
+echo Password is "$password"

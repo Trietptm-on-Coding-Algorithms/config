@@ -103,8 +103,6 @@ install wget
 install wine
 install xz
 install yara
-install zsh
-install zsh-completions
 
 # clean outdated versions
 cleanup
