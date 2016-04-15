@@ -10,7 +10,7 @@ exit
 # Update and install
 sudo apt-get -y update
 sudo apt-get -y upgrade
-sudo apt-get -y install binutils binwalk build-essential gdb git ipython nasm netcat-traditional nmap qemu-system openssl p7zip pwgen scapy socat ssh tmux vim
+sudo apt-get -y install binutils binwalk build-essential gdb git ipython nasm netcat-traditional nmap qemu-system openssl p7zip pwgen scapy socat ssh tmux vim stow
 
 # checksec
 wget http://www.trapkit.de/tools/checksec.sh
