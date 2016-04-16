@@ -1,1 +1,3 @@
-for d in $(ls); do stow $d; done
+stow vim
+stow tmux
+stow bash
