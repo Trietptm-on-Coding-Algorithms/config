@@ -1,0 +1,9 @@
+[user]
+	email = thalfpop@gmail.com
+	name = Tyler Halfpop
+[push]
+    default = simple
+[color]
+    ui = true
+[core]
+    editor = vim
