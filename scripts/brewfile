@@ -93,6 +93,7 @@ install shiboken
 install sip
 install ssdeep
 install swig
+install stow
 install tmux
 install tokyo-cabinet
 install ucl
