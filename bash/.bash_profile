@@ -1,4 +1,5 @@
 export PATH=$PATH:~/bin:/usr/local/sbin
+export PS1="\[\e[36m\]\h\[\e[m\]\\$ "
 
 export EDITOR=vim
 export VISUAL=$EDITOR
