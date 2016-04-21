@@ -1,5 +1,5 @@
 export PATH=$PATH:~/bin:/usr/local/sbin
-export PS1="\[\033[38;5;14m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\]\\$\[$(tput sgr0)\]"
+export PS1="\[\033[38;5;14m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;7m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]\\$\[$(tput sgr0)\]"
 
 export EDITOR=vim
 export VISUAL=$EDITOR
